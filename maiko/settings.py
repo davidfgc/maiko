@@ -24,7 +24,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'maiko-mantenimiento.herokuapp.com']
 
 
 # Application definition
@@ -68,6 +68,17 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'maiko',                      # Or path to database file if using sqlite3.
+#         'USER': 'davidgonzalez',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
