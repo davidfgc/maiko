@@ -1,0 +1,111 @@
+backgroundHomeUrl = "../img/home.jpg"
+blanco = rgb(255, 255, 204)
+blancoT6 = rgba(255, 255, 204, 0.6)
+blancoT8 = rgba(255, 255, 204, 0.8)
+negroT6 = rgba(10, 10, 10, 0.6)
+rojo = rgb(255, 51, 51)
+
+.background
+	background url(backgroundHomeUrl) no-repeat top center
+	background-size cover
+	// height 100%
+
+header
+	background-color negroT6
+	.leftHeader
+		.menu
+			display inline-block
+			font-weight  lighter
+			margin 0.5rem
+			a
+				color blancoT8
+			.itemMenu
+				border-right 1px solid blanco
+				display inline-block
+				padding 0 0.5rem
+	.logoHeader
+		margin 0 0.5rem
+	.rightHeader
+		background-color rojo
+		padding 0.5rem
+		.spAccesoClientes
+			background-color rojo
+			color blancoT8
+			display inline-block 
+	.social
+		height 1.75rem
+		margin 0.25rem 0.5rem
+	.leftHeader
+	.rightHeader
+		display inline-block
+
+footer
+	// color blanco
+	bottom 0
+	background-color rojo
+	font-size 0.75rem
+	font-weight  lighter
+	// position absolute
+	width 100%
+	.logoCompleto
+		margin 0.5rem
+	.rightFooter
+		padding 0.75rem
+		.imSobre
+		.spTelefono
+			margin 0 1rem 0 0
+
+.paHome
+	// height 200%
+	text-align center
+	.fiLogoGrande
+		color blanco
+		display inline-block 
+		font-weight lighter
+		// left 50%
+		margin 5rem 0
+		// position relative
+		// top 50%
+		// transform translate(-50%, 50%)
+		figcaption
+			max-width 388px
+			padding 1rem
+.paQuienesSomos
+	.content
+		.leftSide
+			padding 2rem 0
+		.rightSide
+			.barras
+				position relative
+				:first-child
+				:last-child
+					background-color rojo
+					margin 0 1.5rem
+					height 6rem
+					width 23px
+			.message
+				background-color rojo
+				color blanco
+				padding 1rem
+				.icons
+					margin-bottom 1rem
+					li
+						padding 0 0.5rem
+					:last-child
+						text-align right
+					:nth-child(2)
+						text-align center
+	.header
+		background-color rojo
+		color blanco
+		font-size 1.5rem
+		a
+			color blanco
+			font-size 1rem
+			text-decoration none
+		.menu
+			text-align center
+			&:last-child
+				border-left 1px solid blanco
+		.titulo
+			margin 0.5rem 0

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MaikoApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Maiko Mantenimiento</title>
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/vendor/foundation.min.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
+</head>
+<body>
+	<div class="background" id="background" ng-controller="MainController">
+		<header>
+			<div class="row">
+				<div class="leftHeader">
+					<a href="#/home">
+						<img src="{{ STATIC_URL }}img/logo-pequeno.png" class="logoHeader" alt=""></a>
+					<ul class="menu">
+						<a href="#/quienes-somos"><li class="itemMenu">¿Quiénes somos?</li></a>
+						<a href="#/"><li class="itemMenu">Nuestros Servicios</li></a>
+						<a href="#/"><li class="itemMenu">Blog</li></a>
+						<a href="#/"><li class="itemMenu">Contáctanos</li></a>
+					</ul>
+				</div>
+				<div class="rightHeader right">
+					<span class="spAccesoClientes">Acceso a clientes</span>
+					<!-- <ul class="menu">
+						<li class="itemMenu">Acceso a clientes</li></ul> -->
+				</div>
+				<img src="{{ STATIC_URL }}img/facebook.png" class="social right" alt="">
+			</div>
+		</header>
+		<div ng-view></div>
+		<footer>
+			<div class="row">
+				<img src="{{ STATIC_URL }}img/logo-completo.png" class="logoCompleto" alt="">
+				<span class="spDerechosReservados">
+					© 2015 Maiko Mantenimiento SAS Todos los derechos reservados
+				</span>
+				<div class="rightFooter right">
+					<span>Contáctanos</span>
+					<img src="{{ STATIC_URL }}img/sobre.png" class="imSobre" alt="">
+					<img src="{{ STATIC_URL }}img/telefono.png" alt="">
+					<span class="spTelefono">304 564 8414</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/vendor/angularjs/angular.min.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/vendor/angularjs/angular-route.min.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/app.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/controllers.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+*.DS_Store
+*.diff
+*.log
+*.pyc
+*.sqlite3
+static/*
+*/migrations/*

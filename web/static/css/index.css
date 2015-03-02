@@ -1,0 +1,119 @@
+.background {
+  background: url("../img/home.jpg") no-repeat top center;
+  background-size: cover;
+}
+header {
+  background-color: rgba(10,10,10,0.6);
+}
+header .leftHeader .menu {
+  display: inline-block;
+  font-weight: lighter;
+  margin: 0.5rem;
+}
+header .leftHeader .menu a {
+  color: rgba(255,255,204,0.8);
+}
+header .leftHeader .menu .itemMenu {
+  border-right: 1px solid #ffc;
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+header .logoHeader {
+  margin: 0 0.5rem;
+}
+header .rightHeader {
+  background-color: #f33;
+  padding: 0.5rem;
+}
+header .rightHeader .spAccesoClientes {
+  background-color: #f33;
+  color: rgba(255,255,204,0.8);
+  display: inline-block;
+}
+header .social {
+  height: 1.75rem;
+  margin: 0.25rem 0.5rem;
+}
+header .leftHeader,
+header .rightHeader {
+  display: inline-block;
+}
+footer {
+  bottom: 0;
+  background-color: #f33;
+  font-size: 0.75rem;
+  font-weight: lighter;
+  width: 100%;
+}
+footer .logoCompleto {
+  margin: 0.5rem;
+}
+footer .rightFooter {
+  padding: 0.75rem;
+}
+footer .rightFooter .imSobre,
+footer .rightFooter .spTelefono {
+  margin: 0 1rem 0 0;
+}
+.paHome {
+  text-align: center;
+}
+.paHome .fiLogoGrande {
+  color: #ffc;
+  display: inline-block;
+  font-weight: lighter;
+  margin: 5rem 0;
+}
+.paHome .fiLogoGrande figcaption {
+  max-width: 388px;
+  padding: 1rem;
+}
+.paQuienesSomos .content .leftSide {
+  padding: 2rem 0;
+}
+.paQuienesSomos .content .rightSide .barras {
+  position: relative;
+}
+.paQuienesSomos .content .rightSide .barras :first-child,
+.paQuienesSomos .content .rightSide .barras :last-child {
+  background-color: #f33;
+  margin: 0 1.5rem;
+  height: 6rem;
+  width: 23px;
+}
+.paQuienesSomos .content .rightSide .message {
+  background-color: #f33;
+  color: #ffc;
+  padding: 1rem;
+}
+.paQuienesSomos .content .rightSide .message .icons {
+  margin-bottom: 1rem;
+}
+.paQuienesSomos .content .rightSide .message .icons li {
+  padding: 0 0.5rem;
+}
+.paQuienesSomos .content .rightSide .message .icons :last-child {
+  text-align: right;
+}
+.paQuienesSomos .content .rightSide .message .icons :nth-child(2) {
+  text-align: center;
+}
+.paQuienesSomos .header {
+  background-color: #f33;
+  color: #ffc;
+  font-size: 1.5rem;
+}
+.paQuienesSomos .header a {
+  color: #ffc;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.paQuienesSomos .header .menu {
+  text-align: center;
+}
+.paQuienesSomos .header .menu:last-child {
+  border-left: 1px solid #ffc;
+}
+.paQuienesSomos .header .titulo {
+  margin: 0.5rem 0;
+}
