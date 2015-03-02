@@ -96,10 +96,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
 STATIC_URL = '/static/'
 
 #settings added manually
+STATIC_ROOT = 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 TEMPLATE_DIRS=(
     os.path.join(BASE_DIR, 'templates'),
 )
