@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '^q4f!w_(4gtxejjt75#%a)t8g!!zt6xdc2zxha6hxx+w8!9xv2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -92,3 +92,7 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS=(
     os.path.join(BASE_DIR, 'templates'),
 )
+
+import dj_database_url
+if not DEBUG:
+    DATABASES = {'default' : dj_database_url.config() }
