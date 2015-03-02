@@ -1,1 +1,1 @@
-web: gunicorn discovering.wsgi
+web: gunicorn maiko.wsgi
