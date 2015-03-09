@@ -24,7 +24,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'maiko-mantenimiento.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'maiko-mantenimiento.herokuapp.com', '.maico.com.co']
 
 
 # Application definition
