@@ -13,6 +13,9 @@ header .leftHeader .menu {
 header .leftHeader .menu a {
   color: rgba(255,255,204,0.8);
 }
+header .leftHeader .menu a.active {
+  font-weight: bold;
+}
 header .leftHeader .menu .itemMenu {
   border-right: 1px solid #ffc;
   display: inline-block;
@@ -39,6 +42,7 @@ header .rightHeader {
   display: inline-block;
 }
 footer {
+  color: #ffc;
   bottom: 0;
   background-color: #f33;
   font-size: 0.75rem;
@@ -51,9 +55,41 @@ footer .logoCompleto {
 footer .rightFooter {
   padding: 0.75rem;
 }
+footer .rightFooter a {
+  color: #ffc;
+}
 footer .rightFooter .imSobre,
 footer .rightFooter .spTelefono {
   margin: 0 1rem 0 0;
+}
+.paContacto .diContacto {
+  background-color: #f33;
+  border-radius: 2rem;
+  color: #ffc;
+  margin: 2rem 3rem 2rem 5rem;
+  padding: 2rem 4rem;
+}
+.paContacto .diContacto .diTitulo {
+  font-size: 1.25rem;
+  text-align: center;
+}
+.paContacto .diContacto .diEnviar {
+  text-align: center;
+}
+.paContacto .diContacto .diEnviar a {
+  background-color: #ffc;
+  border-radius: 1rem;
+  color: #f33;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+}
+.paContacto .diContacto .diFieldName {
+  margin-top: 2rem;
+  text-align: center;
+}
+.paContacto .diContacto input {
+  background-color: #ffc;
+  color: rgba(10,10,10,0.8);
 }
 .paHome {
   text-align: center;
@@ -91,22 +127,31 @@ footer .rightFooter .spTelefono {
 }
 .paQuienesSomos .content .rightSide .message .icons li {
   padding: 0 0.5rem;
+  text-align: center;
+}
+.paQuienesSomos .content .rightSide .message .icons :first-child {
+  text-align: left;
 }
 .paQuienesSomos .content .rightSide .message .icons :last-child {
   text-align: right;
 }
-.paQuienesSomos .content .rightSide .message .icons :nth-child(2) {
+.paQuienesSomos .content .rightSide .message .porQueDiferentes figure {
   text-align: center;
+  margin: 0;
+}
+.paQuienesSomos .content .rightSide .message .porQueDiferentes figure figcaption {
+  margin: 1rem 0;
 }
 .paQuienesSomos .header {
   background-color: #f33;
   color: #ffc;
-  font-size: 1.5rem;
 }
 .paQuienesSomos .header a {
   color: #ffc;
-  font-size: 1rem;
+  display: inline-block;
+  height: 100%;
   text-decoration: none;
+  width: 100%;
 }
 .paQuienesSomos .header .menu {
   text-align: center;
@@ -114,6 +159,46 @@ footer .rightFooter .spTelefono {
 .paQuienesSomos .header .menu:last-child {
   border-left: 1px solid #ffc;
 }
+.paQuienesSomos .header .menu,
 .paQuienesSomos .header .titulo {
-  margin: 0.5rem 0;
+  padding: 1rem;
+  display: inline-block;
+}
+.paServicios {
+  color: #ffc;
+}
+.paServicios .leftSide {
+  padding: 2rem 3rem 0 0;
+}
+.paServicios .leftSide .diServicio {
+  text-shadow: 2px 2px rgba(10,10,10,0.8);
+}
+.paServicios .leftSide .diServicio .spTituloServicio {
+  display: inline-block;
+  font-size: 4rem;
+}
+.paServicios .leftSide .diServicio .spDescripcionServicio {
+  font-size: 1.5rem;
+}
+.paServicios .leftSide .diServicioSeleccionado .diDescripcion {
+  background-color: rgba(10,10,10,0.8);
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+.paServicios .leftSide .diServicioSeleccionado .spTituloServicio {
+  font-size: 2.75rem;
+  text-shadow: 2px 2px rgba(10,10,10,0.8);
+}
+.paServicios .rightSide {
+  background-color: rgba(10,10,10,0.8);
+}
+.paServicios .rightSide ul {
+  font-size: 1.25rem;
+}
+.paServicios .rightSide ul li {
+  display: block;
+  margin: 0.75rem 0;
+}
+.paServicios .rightSide ul li.active {
+  color: #f33;
 }

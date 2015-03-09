@@ -1,0 +1,33 @@
+<section class="paServicios row">
+	{% verbatim %}
+	<div class="small-8 columns leftSide">
+		<div class="diServicio" ng-hide="services.selected">
+			<span class="spTituloServicio">
+				NUESTROS SERVICIOS</span>
+			<span class="spDescripcionServicio">
+				Brindamos soluciones a sistemas y equipos locativos y de apoyo crítico, a través de la creación de planes de mantenimiento.</span>
+		</div>
+		<div class="diServicioSeleccionado" ng-show="services.selected">
+			<span class="spTituloServicio">{{services.selected.name }}</span>
+			<div class="diDescripcion">
+				<ul>
+					<li ng-repeat="desc in services.selected.desc">{{ desc }}</li>
+				</ul>
+				<img ng-click="changeService(-1)"
+					ng-src="{{img.anteriorServicio}}" alt="">
+				<img ng-click="changeService(1)"
+					ng-src="{{img.siguienteServicio}}" class="right" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="small-4 columns rightSide">
+		<ul>
+			<li ng-class="getServiceItemMenuClass(service)"
+				ng-click="services.selected = service"
+				ng-show="service.desc.length > 0"
+				ng-repeat="service in services.values">
+				{{service.name}}</li>
+		</ul>
+	</div>
+	{% endverbatim %}
+</section>
