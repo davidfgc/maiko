@@ -55,11 +55,6 @@
 						name:"Redes eléctricas"
 					},
 					{
-						desc: [
-						],
-						name:"Pintura"
-					},
-					{
 						background: "mamposteria-techos-falsos.jpg",
 						desc: [
 							"Reparación y/o construcción de muros (ladrillo-bloque) y sistemas ligeros           (drywall-superboard) en enchape o estuco.",

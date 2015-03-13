@@ -1,33 +1,37 @@
-<section class="paServicios row">
+<section class="paServicios row" id="paServicios">
+	<a href="" class="aMenu" ng-show="services.selected && !display.menu" ng-click="updateUI(true)">
+		<img src="{{STATIC_URL}}img/flechas-mostrar-menu.png">
+	</a>
 	{% verbatim %}
-	<div class="small-8 columns leftSide">
+	<div class="small-8 columns leftSide" ng-show="!services.selected">
 		<div class="diServicio" ng-hide="services.selected">
 			<span class="spTituloServicio">
 				NUESTROS SERVICIOS</span>
 			<span class="spDescripcionServicio">
 				Brindamos soluciones a sistemas y equipos locativos y de apoyo crítico, a través de la creación de planes de mantenimiento.</span>
 		</div>
-		<div class="diServicioSeleccionado" ng-show="services.selected">
+	</div>
+	<div class="small-10 small-offset-1 columns diServicioSeleccionado" ng-show="services.selected">
+		<div class="diDescripcion">
 			<span class="spTituloServicio">{{services.selected.name }}</span>
-			<div class="diDescripcion">
-				<ul>
-					<li ng-repeat="desc in services.selected.desc">{{ desc }}</li>
-				</ul>
-				<img ng-click="changeService(-1)"
-					ng-src="{{img.anteriorServicio}}" alt="">
-				<img ng-click="changeService(1)"
-					ng-src="{{img.siguienteServicio}}" class="right" alt="">
-			</div>
+			<ul>
+				<li ng-repeat="desc in services.selected.desc">{{ desc }}</li>
+			</ul>
+			<img ng-click="changeService(-1)"
+				ng-src="{{img.anteriorServicio}}" class="left" alt="">
+			<img ng-click="changeService(1)"
+				ng-src="{{img.siguienteServicio}}" class="right" alt="">
 		</div>
 	</div>
-	<div class="small-4 columns rightSide">
-		<ul>
-			<li ng-class="getServiceItemMenuClass(service)"
-				ng-click="services.selected = service"
-				ng-show="service.desc.length > 0"
-				ng-repeat="service in services.values">
-				{{service.name}}</li>
-		</ul>
+	<div ng-class="getMenuClass()" ng-show="!services.selected || display.menu">
+		<div class="menu" id="menuServices">
+			<ul>
+				<a href="" ng-click="updateUI(false, service)"
+					ng-show="service.desc.length > 0"
+					ng-repeat="service in services.values"><li ng-class="getServiceItemMenuClass(service)">
+					{{service.name}}</li></a>
+			</ul>
+		</div>
 	</div>
 	{% endverbatim %}
 </section>

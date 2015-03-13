@@ -1,6 +1,10 @@
 .background {
   background: url("../img/home.jpg") no-repeat top center;
   background-size: cover;
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
 }
 header {
   background-color: rgba(10,10,10,0.6);
@@ -47,6 +51,7 @@ footer {
   background-color: #f33;
   font-size: 0.75rem;
   font-weight: lighter;
+  position: fixed;
   width: 100%;
 }
 footer .logoCompleto {
@@ -91,14 +96,22 @@ footer .rightFooter .spTelefono {
   background-color: #ffc;
   color: rgba(10,10,10,0.8);
 }
+.diPageWrapper {
+  height: 100%;
+}
 .paHome {
+  height: 100%;
   text-align: center;
 }
 .paHome .fiLogoGrande {
   color: #ffc;
   display: inline-block;
   font-weight: lighter;
-  margin: 5rem 0;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .paHome .fiLogoGrande figcaption {
   max-width: 388px;
@@ -166,12 +179,17 @@ footer .rightFooter .spTelefono {
 }
 .paServicios {
   color: #ffc;
+  position: relative;
+}
+.paServicios .aMenu {
+  position: absolute;
+  right: 0;
 }
 .paServicios .leftSide {
   padding: 2rem 3rem 0 0;
 }
-.paServicios .leftSide .diServicio {
-  text-shadow: 2px 2px rgba(10,10,10,0.8);
+.paServicios .leftSide .diServicio span {
+  width: 100%;
 }
 .paServicios .leftSide .diServicio .spTituloServicio {
   display: inline-block;
@@ -180,25 +198,47 @@ footer .rightFooter .spTelefono {
 .paServicios .leftSide .diServicio .spDescripcionServicio {
   font-size: 1.5rem;
 }
-.paServicios .leftSide .diServicioSeleccionado .diDescripcion {
-  background-color: rgba(10,10,10,0.8);
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-}
-.paServicios .leftSide .diServicioSeleccionado .spTituloServicio {
-  font-size: 2.75rem;
-  text-shadow: 2px 2px rgba(10,10,10,0.8);
-}
 .paServicios .rightSide {
-  background-color: rgba(10,10,10,0.8);
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
 }
-.paServicios .rightSide ul {
+.paServicios .rightSide.selected {
+  background-color: rgba(10,10,10,0.7);
+}
+.paServicios .rightSide .menu {
+  background-color: rgba(10,10,10,0.8);
+  display: inline-block;
+  height: 100%;
+  float: right;
+  padding-right: 1rem;
+}
+.paServicios .rightSide .menu ul {
   font-size: 1.25rem;
 }
-.paServicios .rightSide ul li {
+.paServicios .rightSide .menu ul li {
+  color: rgba(255,255,204,0.8);
   display: block;
   margin: 0.75rem 0;
 }
-.paServicios .rightSide ul li.active {
+.paServicios .rightSide .menu ul li.active {
   color: #f33;
+}
+.paServicios .diServicioSeleccionado .diDescripcion {
+  background-color: rgba(10,10,10,0.75);
+  font-size: 1.5rem;
+  margin: 4rem auto;
+  max-width: 700px;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.paServicios .diServicioSeleccionado .diDescripcion li {
+  padding: 0.5rem 0;
+}
+.paServicios .diServicioSeleccionado .diDescripcion .spTituloServicio {
+  font-size: 2.75rem;
+  text-shadow: 2px 2px rgba(10,10,10,0.8);
 }

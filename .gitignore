@@ -5,3 +5,7 @@
 *.sqlite3
 static/*
 */migrations/*
+
+Gruntfile.js
+node_modules/
+package.json
