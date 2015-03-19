@@ -7,8 +7,8 @@
 		<div class="diServicio" ng-hide="services.selected">
 			<span class="spTituloServicio">
 				NUESTROS SERVICIOS</span>
-			<span class="spDescripcionServicio">
-				Brindamos soluciones a sistemas y equipos locativos y de apoyo crítico, a través de la creación de planes de mantenimiento.</span>
+			<!-- <span class="spDescripcionServicio">
+				Brindamos soluciones a sistemas y equipos locativos y de apoyo crítico, a través de la creación de planes de mantenimiento.</span> -->
 		</div>
 	</div>
 	<div class="small-10 small-offset-1 columns diServicioSeleccionado" ng-show="services.selected">
@@ -17,10 +17,14 @@
 			<ul>
 				<li ng-repeat="desc in services.selected.desc">{{ desc }}</li>
 			</ul>
-			<img ng-click="changeService(-1)"
-				ng-src="{{img.anteriorServicio}}" class="left" alt="">
-			<img ng-click="changeService(1)"
-				ng-src="{{img.siguienteServicio}}" class="right" alt="">
+			<a href="">
+				<img ng-click="changeService(-1)"
+					ng-src="{{img.anteriorServicio}}" class="left" alt="">
+			</a>
+			<a href="">
+				<img ng-click="changeService(1)"
+					ng-src="{{img.siguienteServicio}}" class="right" alt="">
+			</a>
 		</div>
 	</div>
 	<div ng-class="getMenuClass()" ng-show="!services.selected || display.menu">

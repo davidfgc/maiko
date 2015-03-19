@@ -6,12 +6,58 @@
 			var background = document.getElementById("background");
 			background.style.backgroundImage = "url('static/img/home.jpg')";
 
+			$scope.validated = false;
+			$scope.contact = {
+				name: undefined,
+				role: undefined,
+				mail: undefined,
+				phone: undefined,
+				query: undefined
+			}
+
+			$scope.getClass = function (valid) {
+				res = ""
+				if (!valid) {
+					res = "error";
+				}
+				return res;
+			}
+
 			$scope.sendQuery = function () {
+				$scope.validated = true;
+				
+				if (!$scope.validate()) {
+					return;
+				}
+
 				$scope.contact.message = "";
 				ContactService.sendQuery($scope.contact)
 					.then(function(contact) {
 						$scope.contact = contact;
 					});
+			}
+
+			$scope.validate = function () {
+				var res = true;
+				if (!$scope.contact) {
+					res = false;
+				}
+				else {
+					for (index in $scope.contact) {
+						if (!$scope.validateField({value:$scope.contact[index]})) {
+							res = false;
+						}
+					}
+				}
+				return res;
+			}
+
+			$scope.validateField = function (obj) {
+				var res = true;
+				if (!obj.value || obj.value.length === 0) {
+					res = false;
+				}
+				return res;
 			}
 		}])
 		.controller("HomeController", [function () {
