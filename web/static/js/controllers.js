@@ -72,9 +72,20 @@
 			}
 
 		}])
-		.controller("QuienesSomosController", [function () {
+		.controller("QuienesSomosController", ['$scope', function ($scope) {
 			var background = document.getElementById("background");
-			background.style.backgroundImage = "url('static/img/quienes-somos.png')";
+			background.style.backgroundImage = "url('static/img/quienes-somos.jpg')";
+
+			$scope.getSubMenuClass = function (porqueDiferentes) {
+				var res = "itemMenu";
+				if (porqueDiferentes && $scope.quienesSomos.porQueDiferentes) {
+					res += " active";
+				}
+				else if (!porqueDiferentes && !$scope.quienesSomos.porQueDiferentes) {
+					res += " active";
+				}
+				return res;
+			}
 		}])
 		.controller("ServiciosController", 
 				['$scope', '$timeout','InfoService', 'ServiceService',

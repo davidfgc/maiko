@@ -109,3 +109,10 @@ TEMPLATE_DIRS=(
 import dj_database_url
 if not DEBUG:
     DATABASES = {'default' : dj_database_url.config() }
+
+#bussiness settings added manually
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'javier.rozo@maiko.com.co'
+EMAIL_HOST_PASSWORD = 'du5m4dty6x'

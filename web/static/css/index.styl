@@ -1,3 +1,5 @@
+@import("nib")
+
 backgroundHomeUrl = "../img/home.jpg"
 blanco = rgb(255, 255, 204)
 blancoT6 = rgba(255, 255, 204, 0.6)
@@ -147,16 +149,30 @@ footer
 	.header
 		background-color rojo
 		color blanco
-		a
-			color blanco
-			display inline-block
-			height 100%
-			text-decoration none
-			width 100%
 		.menu
+			position relative
 			text-align center
 			&:last-child
 				border-left 1px solid blanco
+			.itemMenu
+				color blanco
+				display inline-block
+				height 100%
+				text-decoration none
+				width 100%
+				&.active
+					&:after
+						content ""
+						top 100%
+						left 50%
+						width 100%
+						border-left 150px solid transparent
+						border-right 150px solid transparent
+						border-top 25px solid rojo
+						height 0
+						position absolute
+						transform translate(-50%, 0)
+						width 0
 		.menu
 		.titulo
 			padding 1rem
