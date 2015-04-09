@@ -20,6 +20,9 @@ mail = {
 def index(request):
 	return render(request, 'web/index.html')
 
+def partials_blog(request):
+	return render(request, 'web/partials/blog.html')
+
 def partials_contacto(request):
 	response = "entra"
 	try:

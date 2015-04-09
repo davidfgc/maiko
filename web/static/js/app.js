@@ -14,6 +14,9 @@
 					templateUrl: '/partials/home',
 					controller: 'HomeController'
 				})
+				.when('/blog', {
+					templateUrl: '/partials/blog',
+				})
 				.when('/contacto', {
 					templateUrl: '/partials/contacto',
 					controller: 'ContactoController'
