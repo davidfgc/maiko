@@ -31,8 +31,8 @@
 		}])
 		.factory('InfoService', [function () {
 			var img = {
-				anteriorServicio: "/static/img/anterior-servicio.png",
-				siguienteServicio: "/static/img/siguiente-servicio.png",
+				anteriorServicio: "static/img/anterior-servicio.png",
+				siguienteServicio: "static/img/siguiente-servicio.png",
 			}
 
 			return {
