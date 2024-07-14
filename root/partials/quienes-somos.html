@@ -1,0 +1,69 @@
+<section class="paQuienesSomos">
+	<div class="header">
+		<div class="row">
+			<div class="titulo small-4 columns"><strong>
+				¿Quiénes Somos111?</strong></div>
+			<div class="menu small-4 columns">
+				<a ng-class="getSubMenuClass(true)" href="" 
+					ng-click="quienesSomos.porQueDiferentes = true">
+					¿Qué nos hace diferentes?</a>
+			</div>
+			<div class="menu small-4 columns">
+				<a ng-class="getSubMenuClass(false)" href=""
+					ng-click="quienesSomos.porQueDiferentes = false">
+					¿Por qué confiar en nosotros?</a>
+			</div>
+		</div>
+	</div>
+	<div class="content row">
+		<div class="leftSide small-4 columns">	
+			<p>​Maiko es una empresa 2 que <strong>brinda soluciones de mantenimiento locativo</strong> y de equipos de apoyo crítico a través de un grupo de personas <strong>capacitadas y con el expertise</strong> necesario.</p>
+
+			<p>Trabajamos con <strong>profesionalismo, calidad y honestidad</strong>, garantizando el adecuado funcionamiento de los equipos, siguiendo con los parámetros de conservación <strong>indicados por cada fabricante</strong>. Nuestras actividades y las tareas de alto riesgo se realizan con la adecuada protección de áreas y trabajadores, basándonos en <strong>nuestra política de calidad y seguridad</strong>.​</p>
+		</div>
+		<div class="rightSide small-8 columns" ng-init="quienesSomos.porQueDiferentes = true">
+			<div class="barras row">
+				<!-- <div class="barraIzquierda left"></div>
+				<div class="barraDerecha right"></div> -->
+				<div class="small-1 columns"></div>
+				<div class="small-10 columns"></div>
+				<div class="small-1 columns"></div>
+			</div>
+			<div class="message">
+				<ul class="icons small-block-grid-3">
+					<li><img src="../static/img/circulos-esquinas.png" alt=""></li>
+					<li>&nbsp;
+						<img src="../static/img/bulb.png" 
+						ng-hide="quienesSomos.porQueDiferentes"></li>
+					<li><img src="../static/img/circulos-esquinas.png" alt=""></li>
+				</ul>
+				<ul class="small-block-grid-3 porQueDiferentes" 
+					ng-show="quienesSomos.porQueDiferentes">
+					<li><figure>
+						<img src="../static/img/quienes-somos-ingenieros.png" alt="">
+						<figcaption>
+							Equipo de ingenieros y técnicos especializados
+						</figcaption></figure></li>
+					<li><figure>
+						<img src="../static/img/quienes-somos-innovacion.png" alt="">
+						<figcaption>
+							Innovación tecnológica a través de Software PMP
+						</figcaption></figure></li>
+					<li><figure>
+						<img src="../static/img/quienes-somos-apoyo.png" alt="">
+						<figcaption>
+							Equipos de apoyo crítico en plantas y oficinas
+						</figcaption></figure></li>
+				</ul>
+				<ul ng-hide="quienesSomos.porQueDiferentes">
+					<li>Confiabilidad y calidad del equipo humano</li>
+					<li>Reducción de paradas imprevistas en los sistemas y equipos</li>
+					<li>Operación en condiciones óptimas de seguridad</li>
+					<li>Mayor vida útil de los equipos e instalaciones</li>
+					<li>Menores gastos al no generar mantenimientos correctivos innecesarios</li>
+					<li>Adecuada planeación del presupuesto por parte del cliente</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,236 @@
+@import("nib")
+
+backgroundHomeUrl = "../img/home.jpg"
+blanco = rgb(255, 255, 204)
+blancoT6 = rgba(255, 255, 204, 0.6)
+blancoT8 = rgba(255, 255, 204, 0.8)
+negroT6 = rgba(10, 10, 10, 0.6)
+negroT70 = rgba(10, 10, 10, 0.70)
+negroT75 = rgba(10, 10, 10, 0.75)
+negroT8 = rgba(10, 10, 10, 0.8)
+rojo = rgb(255, 51, 51)
+
+.background
+	background url(backgroundHomeUrl) no-repeat top center
+	background-size cover
+	min-height 100%
+
+body
+	min-height 100%
+
+header
+	background-color negroT6
+	.leftHeader
+		.menu
+			display inline-block
+			font-weight  lighter
+			margin 0.5rem
+			a
+				color blancoT8
+				&.active
+					font-weight bold
+			.itemMenu
+				border-right 1px solid blanco
+				display inline-block
+				padding 0 0.5rem
+	.logoHeader
+		margin 0 0.5rem
+	.rightHeader
+		background-color rojo
+		padding 0.5rem
+		.spAccesoClientes
+			background-color rojo
+			color blancoT8
+			display inline-block 
+	.social
+		height 1.75rem
+		margin 0.25rem 0.5rem
+	.leftHeader
+	.rightHeader
+		display inline-block
+
+footer
+	color blanco
+	bottom 0
+	background-color rojo
+	font-size 0.75rem
+	font-weight  lighter
+	position fixed
+	width 100%
+	.logoCompleto
+		margin 0.5rem
+	.rightFooter
+		padding 0.75rem
+		a
+			color blanco
+		.imSobre
+		.spTelefono
+			margin 0 1rem 0 0
+
+.paBlog
+	iframe
+		height 1000px
+		width 100%
+
+.paContacto
+	.diContacto
+		background-color rojo
+		border-radius 2rem
+		color blanco
+		margin 2rem 3rem 2rem 5rem
+		padding 2rem 4rem
+		.diTitulo
+			font-size 1.25rem
+			text-align center
+		.diEnviar
+			text-align center
+			a
+				background-color blanco
+				border-radius 1rem
+				color rojo
+				display inline-block
+				padding 0.5rem 2rem
+				&.error
+					opacity 0.5
+		.diFieldName
+			// display inline-block
+			margin-top 0.75rem
+			text-align center
+		input
+			background-color blanco
+			color negroT8
+
+.diPageWrapper
+	height 100%
+
+.paHome
+	height 100%
+	text-align center
+	.fiLogoGrande
+		color blanco
+		display inline-block 
+		font-weight lighter
+		left 50%
+		margin 0
+		position absolute
+		top 50%
+		transform translate(-50%, -50%)
+		figcaption
+			max-width 388px
+			padding 1rem
+.paQuienesSomos
+	.content
+		.leftSide
+			padding 2rem 0
+		.rightSide
+			.barras
+				position relative
+				:first-child
+				:last-child
+					background-color rojo
+					margin 0 1.5rem
+					height 6rem
+					width 23px
+			.message
+				background-color rojo
+				color blanco
+				padding 1rem
+				// &.porQueConfiar
+				.icons
+					margin-bottom 1rem
+					li
+						padding 0 0.5rem
+						text-align center
+					:first-child
+						text-align left
+					:last-child
+						text-align right
+				.porQueDiferentes
+					figure
+						text-align center
+						margin 0
+						figcaption
+							margin 1rem 0
+	.header
+		background-color rojo
+		color blanco
+		.menu
+			position relative
+			text-align center
+			&:last-child
+				border-left 1px solid blanco
+			.itemMenu
+				color blanco
+				display inline-block
+				height 100%
+				text-decoration none
+				width 100%
+				&.active
+					&:after
+						content ""
+						top 100%
+						left 50%
+						width 100%
+						border-left 150px solid transparent
+						border-right 150px solid transparent
+						border-top 25px solid rojo
+						height 0
+						position absolute
+						transform translate(-50%, 0)
+						width 0
+		.menu
+		.titulo
+			padding 1rem
+			display inline-block
+			
+.paServicios
+	color blanco
+	position relative
+	.aMenu
+		position absolute
+		right 0
+	.leftSide
+		padding 2rem 3rem 0 0
+		.diServicio
+			span 
+				width 100%
+			.spTituloServicio
+				display inline-block
+				font-size 4rem
+			.spDescripcionServicio
+				font-size 1.5rem
+	.rightSide
+		height 100%
+		padding 0
+		position absolute
+		right 0
+		width 100%
+		&.selected
+			background-color negroT70
+		.menu
+			background-color negroT8
+			display inline-block
+			height 100%
+			float right
+			padding-right 1rem
+			ul
+				font-size 1.25rem
+				li
+					color blancoT8
+					display block
+					margin 0.75rem 0
+					&.active
+						color rojo
+	.diServicioSeleccionado
+		.diDescripcion
+			background-color negroT75
+			font-size 1.5rem
+			margin 4rem auto
+			max-width 700px
+			overflow hidden
+			padding 1rem 2rem
+			li
+				padding 0.5rem 0
+			.spTituloServicio
+				font-size 2.75rem
+				text-shadow 2px 2px negroT8

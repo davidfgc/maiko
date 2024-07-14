@@ -1,0 +1,44 @@
+<section class="paContacto">
+	<div class="diContacto">
+		<div class="diTitulo">!Gracias por estar en contacto con nosotros, diligencie la información y le daremos respuesta oportuna!</div>
+		<div class="row">
+			<div class="diFieldName small-2 columns">Nombre</div>
+			<div class="small-10 columns">
+				<span class="spFieldMessage" ng-show="validated && !validateField({value:contact.name})"><small>Debes llenar este campo</small></span>
+				<input type="text" ng-model="contact.name">
+			</div>
+		</div>
+		<div class="row">
+			<div class="diFieldName small-2 columns">Cargo</div>
+			<div class="small-10 columns">
+				<span class="spFieldMessage" ng-show="validated && !validateField({value:contact.role})"><small>Debes llenar este campo</small></span>
+				<input type="text" ng-model="contact.role">
+			</div>
+		</div>
+		<div class="row">
+			<div class="diFieldName small-2 columns">Mail</div>
+			<div class="small-10 columns">
+				<span class="spFieldMessage" ng-show="validated && !validateField({value:contact.mail})"><small>Debes llenar este campo</small></span>
+				<input type="text" ng-model="contact.mail">
+			</div>
+		</div>
+		<div class="row">
+			<div class="diFieldName small-2 columns">Teléfono</div>
+			<div class="small-10 columns">
+				<span class="spFieldMessage" ng-show="validated && !validateField({value:contact.phone})"><small>Debes llenar este campo</small></span>
+				<input type="text" ng-model="contact.phone">
+			</div>
+		</div>
+		<div class="row">
+			<div class="diFieldName small-2 columns">Consulta</div>
+			<div class="small-10 columns">
+				<span class="spFieldMessage" ng-show="validated && !validateField({value:contact.query})"><small>Debes llenar este campo</small></span>
+				<input type="text" ng-model="contact.query">
+			</div>
+		</div>
+		<div class="diEnviar">
+			<div class="spMessage">{{contact.message}}</div>
+			<a href="" ng-click="sendQuery()" ng-class="getClass(validate())">Enviar</a>
+		</div>
+	</div>
+</section>
